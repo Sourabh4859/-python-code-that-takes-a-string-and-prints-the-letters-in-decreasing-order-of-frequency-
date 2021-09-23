@@ -1,1 +1,18 @@
 # -python-code-that-takes-a-string-and-prints-the-letters-in-decreasing-order-of-frequency-
+'''
+python code that takes a string and prints the letters
+in decresing order of frequency
+'''
+import collections
+w=input("enter a string")
+def most_frequent(string):
+    d=dict()
+    for key in string:
+        if key not in d:
+            d[key]=1
+        else:
+            d[key]+=1
+    return(d)
+print(most_frequent(w))
+c=collections.Counter(most_frequent(w))
+print(c)
